@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ứng dụng máy tính</title>
+</head>
+<body>
+    <form>
+        <h1>Calculator</h1>
+        <input id = "soThuNhat" type="number" name="nhapsothu1">
+        <input id="soThuHai" type="number" name="nhapsothu2">
+        <br><br>
+
+        <button type="button" onclick="cong()">Addition(+)</button>
+        <button type="button" onclick="tru()">Subtraction(-)</button>
+        <button type="button" onclick="nhan()">Multiplication(X)</button>
+        <button type="button" onclick="chia()">Division(/)</button>
+        
+        <div id="ketQua">
+        </div>
+    </form>
+    <script>
+        function cong(){
+            let soThuNhat = parseInt(document.getElementById("soThuNhat").value);
+            let soThuHai = parseInt(document.getElementById("soThuHai").value);
+            let tong = soThuNhat + soThuHai;
+            document.getElementById("ketQua").innerHTML = "Result Addition: " + tong;
+        }
+
+        function tru(){
+            let soThuNhat = document.getElementById("soThuNhat").value;
+            let soThuHai = document.getElementById("soThuHai").value;
+            let tru = soThuNhat - soThuHai;
+            document.getElementById("ketQua").innerHTML = "Result Subtraction: " + tru;
+        }
+
+        function nhan(){
+            let soThuNhat = document.getElementById("soThuNhat").value;
+            let soThuHai = document.getElementById("soThuHai").value;
+            let nhan = soThuNhat * soThuHai;
+            document.getElementById("ketQua").innerHTML = "Result Multiplication: " + nhan;
+        }
+
+        function chia(){
+            let soThuNhat = document.getElementById("soThuNhat").value;
+            let soThuHai = document.getElementById("soThuHai").value;
+            let chia = soThuNhat / soThuHai;
+            document.getElementById("ketQua").innerHTML = "Result Division: " + chia;
+        }
+    </script>
+</body>
+</html>

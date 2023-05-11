@@ -4,13 +4,13 @@ body {
 }
 
 .form-staff, .list-staff {
-    width: 600px;
+    width: 650px;
     border: 1px solid #ccc;
     margin: 25px;
     padding: 10px;
     background-color: aquamarine;
     color: purple;
-    /* float: left; */
+    /* float: left; */  
 }
 
 h3 {
@@ -37,11 +37,6 @@ button {
 }
 
 .list-staff {
-    width: 1000px;
+    width: 1100px;
     background-color: aquamarine;   
 }
-
-a {
-
-}
- 

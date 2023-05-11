@@ -121,7 +121,9 @@ function showListStaff() {
 
 function deleteStaff(id) {
     let staffs = localStorage.getItem('staffs') ? JSON.parse(localStorage.getItem('staffs')) : [];
-    staffs.splice(id, 1);
+    if (confirm("Bạn có chắc muốn xoá dữ liệu này? (Chú ý: khi thực hiện xoá, dữ liệu sẽ không thể phục hồi")) {
+        staffs.splice(id, 1);
+    }
     localStorage.setItem('staffs', JSON.stringify(staffs));
     showListStaff();
 }
